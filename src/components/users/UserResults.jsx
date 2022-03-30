@@ -11,11 +11,13 @@ const UserResults = () => {
   }, []);
 
   const fetchUsers = async () => {
-    const response = await fetch("https://api.github.com/users", {
-      headers: {
-        Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
-      },
-    });
+    // const response = await fetch("https://api.github.com/users", {
+    //   headers: {
+    //     Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+    //   },
+    // });
+
+    const response = await fetch("https://api.github.com/users")
 
     const data = await response.json();
 
